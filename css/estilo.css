@@ -1,0 +1,49 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #713e8c;
+}
+h1{
+	color: white;
+	font-size: 24pt;
+	font-family: Calibri;
+	text-align: center;
+	padding: 20px;
+}
+hr{
+	width: 90%;
+	display: flex;
+	margin: 0px auto;
+}
+table{
+	margin: 50px auto;
+}
+table td{
+	border: 3px solid white;
+	padding: 15px;
+	color: white;
+	font-weight: bolder;
+	font-size: 20pt;
+	font-family: Calibri;
+	transition: background-color 0.5s;
+	text-align: center;
+}
+table td p{
+	opacity: 0;
+}
+table td:hover{
+	background-color: #915eac;
+}
+p{
+	color: white;
+	font-size: 18pt;
+	font-family: Arial;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: salmon;
+	width: 50%;
+	text-align: center;
+	margin: auto;
+}
