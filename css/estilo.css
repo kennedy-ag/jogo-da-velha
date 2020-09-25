@@ -108,3 +108,9 @@ img{
 	color: black;
 	float: right;
 }
+.vitoria-verde{
+	background-color: green !important;
+}
+.vitoria-vermelho{
+	background-color: red !important;
+}

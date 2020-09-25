@@ -43,12 +43,18 @@ function verificar_termino(){
 	if ((jogadas['q1']==jogadas['q2'] && jogadas['q1']==jogadas['q3'])||
 		(jogadas['q4']==jogadas['q5'] && jogadas['q4']==jogadas['q6'])||
 		(jogadas['q7']==jogadas['q8'] && jogadas['q7']==jogadas['q9'])||
+		(jogadas['q1']==jogadas['q4'] && jogadas['q1']==jogadas['q7'])||
 		(jogadas['q2']==jogadas['q5'] && jogadas['q2']==jogadas['q8'])||
 		(jogadas['q1']==jogadas['q5'] && jogadas['q1']==jogadas['q9'])||
 		(jogadas['q3']==jogadas['q5'] && jogadas['q3']==jogadas['q7'])||
 		(jogadas['q3']==jogadas['q6'] && jogadas['q3']==jogadas['q9']))
 	{
 		texto_vez.innerHTML = nome+"ganhou!";
+		if(jogador==1){
+			$('#vez').toggleClass('vitoria-verde');
+		} else {
+			$('#vez').toggleClass('vitoria-vermelho');
+		}
 		finalizado = true;
 	}
 }
