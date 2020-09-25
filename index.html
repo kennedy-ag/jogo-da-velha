@@ -7,27 +7,66 @@
 		<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	</head>
 	<body>
+		<a id="secao1" href="#">Sobre o projeto</a>
+		<div class="secao" id="projeto">
+			<h3>O projeto</h3>
+			<hr>
+			<p>O projeto consiste na implementação do antigo e famoso jogo de tabuleiro 'Jogo da Velha', onde dois jogadores, nesse caso uma pessoa contra o programa, posicionam peças (símbolos) em um tabuleiro de 3x3 quadrantes com o objetivo de formar uma linha reta com 3 símbolos iguais; Cada jogador tem seu próprio símbolo, predominantemente O e X.</p>
+			<p>Segundo a conceituada revista Super Interessante, o passatempo tem referências de surgimento em meados do século XIV antes de Cristo, contudo, possui indícios arqueológicos que apontam que sua criação pode ter sido independente em diferentes regiões.</p>
+			<hr>
+			<h3>Conhecimentos e ferramentas utilizadas</h3>
+			<hr>
+			<h4>JQuery</h4>
+			<hr>
+			<p>jQuery (JQuery, 2020) é uma biblioteca JavaScript rápida, pequena e rica em recursos. Ele torna as coisas como a passagem e manipulação de documentos HTML, manipulação de eventos, animação e Ajax muito mais simples com uma API fácil de usar que funciona em vários navegadores. Com uma combinação de versatilidade e extensibilidade, a jQuery mudou a maneira como milhões de pessoas escrevem JavaScript.</p>
+			<hr>
+			<h4>Javascript</h4>
+			<hr>
+			<p>De acordo com (Mozilla, 2019), JavaScript é uma linguagem de programação leve e interpretada que permite implementar funcionalidades mais complexas em páginas web. Sempre que uma página web faz mais do que apenas mostrar informações estáticas para você - ela mostra em tempo real conteúdos atualizados, mapas interativos, animações gráficas em 2D/3D, vídeos, etc. tem Javascript envolvido no seu desenvolvimento.</p>
+			<hr>
+			<h3>Referências</h3>
+
+			<p><strong>"Qual é a origem do jogo da velha"</strong>. <i>Super Interessante</i>, 2018. Acesso em: 24 de Set. de 2020. Disponível em: &lt;https://super.abril.com.br/mundo-estranho/qual-e-a-origem-do-jogo-da-velha/#:~:text=A%20refer%C3%AAncia%20mais%20antiga%20que,e%20a%20Am%C3%A9rica%20pr%C3%A9%2Dcolombiana.&gt;.</p><br>
+
+			<p><strong>"What is jQuery?"</strong>. <i>jQuery Foundation</i>, 2020. Acesso em: 24 de Set. de 2020. Disponível em: &lt;https://jquery.com/&gt;.</p><br>
+
+			<p><strong>"Javascript - Aprendendo desenvolvimento web"</strong>. <i>Mozilla</i>, 2019. Acesso em: 24 de Set. de 2020. Disponível em: &lt;https://developer.mozilla.org/pt-BR/docs/Aprender/JavaScript&gt;.</p><br>
+
+			<hr>
+			<button id="botao-projeto">Ocultar</button>
+
+		</div>
+		<a id="secao2" href="#">Sobre o autor</a>
+		<div class="secao" id="autor">
+			<h3>Kennedy Viana Aguiar</h3>
+			<hr>
+			<img src="kennedy.jpg" alt="Foto do autor da página">
+			<p id="sobre">"Me chamo Kennedy Viana Aguiar, tenho 20 anos, sou estudante da área de informática, graduando o quarto (4º) semestre/período de Tecnologia em Sistemas para Internet pelo Instituto Federal de Educação, Ciência e Tecnologia de Brasília - Campus Brasília e faço estágio remunerado na mesma área na Faculdade de Medicina da Universidade de Brasília - Campus Darcy Ribeiro.</p><br>
+			<button id="botao-autor">Ocultar</button>
+		</div>
 		<h1>Jogo da velha</h1>
 		<hr>
 		<table id="tabuleiro">
 			<tr>
-				<td id="q1" onclick="jogar('q1')"><p>a</p></td>
-				<td id="q2" onclick="jogar('q2')"><p>a</p></td>
-				<td id="q3" onclick="jogar('q3')"><p>a</p></td>
+				<td id="q1" onclick="jogar('q1')"></td>
+				<td id="q2" onclick="jogar('q2')"></td>
+				<td id="q3" onclick="jogar('q3')"></td>
 			</tr>
 			<tr>
-				<td id="q4" onclick="jogar('q4')"><p>a</p></td>
-				<td id="q5" onclick="jogar('q5')"><p>a</p></td>
-				<td id="q6" onclick="jogar('q6')"><p>a</p></td>
+				<td id="q4" onclick="jogar('q4')"></td>
+				<td id="q5" onclick="jogar('q5')"></td>
+				<td id="q6" onclick="jogar('q6')"></td>
 			</tr>
 			<tr>
-				<td id="q7" onclick="jogar('q7')"><p>a</p></td>
-				<td id="q8" onclick="jogar('q8')"><p>a</p></td>
-				<td id="q9" onclick="jogar('q9')"><p>a</p></td>
+				<td id="q7" onclick="jogar('q7')"></td>
+				<td id="q8" onclick="jogar('q8')"></td>
+				<td id="q9" onclick="jogar('q9')"></td>
 			</tr>
 		</table>
-		<p id="vez">Aguarde...</p>
+		<a id="resetar" href="index.html">Reiniciar</a>
+		<p id="vez">Jogue!</p>
 
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 		<script src="js/script.js"></script>
 	</body>
 </html>

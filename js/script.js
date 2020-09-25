@@ -1,3 +1,16 @@
+$('#secao1').click(function(){
+	$('#projeto').show();
+});
+$('#secao2').click(function(){
+	$('#autor').show();
+});
+$('#botao-projeto').click(function(){
+	$('#projeto').hide();
+});
+$('#botao-autor').click(function(){
+	$('#autor').hide();
+});
+
 let quadrantes = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9'];
 let jogador = parseInt(prompt("Quem deve começar?\nDigite 1 (você) ou 2 (máquina)"));
 let texto_vez = document.getElementById('vez');
@@ -23,41 +36,19 @@ function verificar_termino(){
 		nome = "Máquina ";
 	}
 
-	if (jogadas['q1']==jogadas['q2'] && jogadas['q1']==jogadas['q3']) {
-		texto_vez.innerHTML = nome+"ganhou!";
-		finalizado = true;
-	}
-	if (jogadas['q4']==jogadas['q5'] && jogadas['q4']==jogadas['q6']) {
-		texto_vez.innerHTML = nome+"ganhou!";
-		finalizado = true;
-	}
-	if (jogadas['q7']==jogadas['q8'] && jogadas['q7']==jogadas['q9']) {
-		texto_vez.innerHTML = nome+"ganhou!";
-		finalizado = true;
-	}
-	if (jogadas['q1']==jogadas['q4'] && jogadas['q1']==jogadas['q7']) {
-		texto_vez.innerHTML = nome+"ganhou!";
-		finalizado = true;
-	}
-	if (jogadas['q2']==jogadas['q5'] && jogadas['q2']==jogadas['q8']) {
-		texto_vez.innerHTML = nome+"ganhou!";
-		finalizado = true;
-	}
-	if (jogadas['q1']==jogadas['q5'] && jogadas['q1']==jogadas['q9']) {
-		texto_vez.innerHTML = nome+"ganhou!";
-		finalizado = true;
-	}
-	if (jogadas['q3']==jogadas['q5'] && jogadas['q3']==jogadas['q7']) {
-		texto_vez.innerHTML = nome+"ganhou!";
-		finalizado = true;
-	}
-	if (jogadas['q3']==jogadas['q6'] && jogadas['q3']==jogadas['q9']) {
-		texto_vez.innerHTML = nome+"ganhou!";
-		finalizado = true;
-	}
-
 	if(quadrantes.length==0){
 		texto_vez.innerHTML = "Deu velha!";
+		finalizado = true;
+	}
+	if ((jogadas['q1']==jogadas['q2'] && jogadas['q1']==jogadas['q3'])||
+		(jogadas['q4']==jogadas['q5'] && jogadas['q4']==jogadas['q6'])||
+		(jogadas['q7']==jogadas['q8'] && jogadas['q7']==jogadas['q9'])||
+		(jogadas['q2']==jogadas['q5'] && jogadas['q2']==jogadas['q8'])||
+		(jogadas['q1']==jogadas['q5'] && jogadas['q1']==jogadas['q9'])||
+		(jogadas['q3']==jogadas['q5'] && jogadas['q3']==jogadas['q7'])||
+		(jogadas['q3']==jogadas['q6'] && jogadas['q3']==jogadas['q9']))
+	{
+		texto_vez.innerHTML = nome+"ganhou!";
 		finalizado = true;
 	}
 }
@@ -70,12 +61,12 @@ function fazer_jogada_da_maquina() {
 		quadrantes.splice(quadrantes.indexOf(jogada), 1);
 		setTimeout(function(){
 			let quadrante = document.getElementById(jogada);
-			quadrante.innerHTML = 'X';
+			quadrante.innerHTML = '<h2>X</h2>';
 			jogadas[jogada] = 'X';
 			texto_vez.innerHTML = "É a sua vez!";
 			verificar_termino();
 			jogador = 1;
-		}, 3000);
+		}, 1500);
 	}
 }
 
@@ -95,4 +86,6 @@ function jogar(q){
 
 if (jogador==2) {
 	fazer_jogada_da_maquina();
+} else {
+	texto_vez.innerHTML = "É a sua vez!";
 }

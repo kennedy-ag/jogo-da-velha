@@ -11,39 +11,100 @@ h1{
 	font-family: Calibri;
 	text-align: center;
 	padding: 20px;
+	margin: 30px 0px;
+}
+h2{
+	font-size: 32pt;
+	font-family: Calibri;
+	font-weight: bolder;
+	color: salmon;
+}
+h3{
+	font-size: 14pt;
+	text-align: center;
 }
 hr{
 	width: 90%;
 	display: flex;
-	margin: 0px auto;
+	margin: 30px auto;
 }
 table{
 	margin: 50px auto;
 }
 table td{
 	border: 3px solid white;
+	width: 75px;
+	height: 75px;
 	padding: 15px;
 	color: white;
 	font-weight: bolder;
-	font-size: 20pt;
+	font-size: 32pt;
 	font-family: Calibri;
 	transition: background-color 0.5s;
 	text-align: center;
 }
-table td p{
-	opacity: 0;
-}
 table td:hover{
 	background-color: #915eac;
+	cursor: pointer;
 }
-p{
+#vez{
 	color: white;
 	font-size: 18pt;
 	font-family: Arial;
 	padding: 10px;
 	border-radius: 10px;
-	background-color: salmon;
+	background-color: #52baab;
 	width: 50%;
 	text-align: center;
-	margin: auto;
+	margin: 30px auto;
+}
+a{
+	display: block;
+	color: white;
+	padding: 15px;
+	text-decoration: none;
+	font-size: 14pt;
+	font-family: Arial;
+	text-align: center;
+	background-color: #52baab;
+}
+a:hover{
+	background-color: #228a7b;
+}
+p{
+	padding: 0px 40px;
+	margin-top: 15px;
+}
+#secao1{
+	border-bottom: 1px solid #fff;
+}
+.secao{
+	background-color: white;
+	font-size: 12pt;
+	font-family: Arial;
+	padding: 15px;
+	display: none;
+	text-align: center;
+	line-height: 35px;
+}
+button{
+	padding: 15px;
+}
+img{
+	width: 50%;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+#sobre{
+	background-color: #ddd;
+	border-radius: 5px;
+	border: 2px solid #713e8c;
+	padding: 15px;
+}
+#resetar{
+	background-color: #ddd;
+	display: inline-block;
+	color: black;
+	float: right;
 }
